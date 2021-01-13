@@ -1,6 +1,6 @@
 import { initTodoListHandlers } from './list/todoList.js';
 import { renderTasks } from './list/renderer.js';
-import { getTasksList } from './list/gateway.js';
+import { getTasksList } from './list/tasksGateway.js';
 import { setItem } from './list/storage.js';
 import './index.scss';
 
@@ -14,7 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const onStorageChange = e => {
-  if (e.key === 'tasksList') renderTasks();
+  if (e.key === 'tasksList') {
+    renderTasks();
+  }
 };
 
 window.addEventListener('storage', onStorageChange);
