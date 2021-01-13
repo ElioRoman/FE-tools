@@ -1,3 +1,4 @@
+const serverUrl = 'https://5fedddb29708250017ce3f18.mockapi.io/api/v1/tasks';
 const mapTasks = tasks => tasks.map(({ _id, ...rest }) => ({ ...rest, id: _id }));
 
 export const getTasksList = () => {
