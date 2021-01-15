@@ -14,4 +14,5 @@ const profile = {
 
 printProfile(profile);
 
+// eslint-disable-next-line no-console
 console.log(profile);
